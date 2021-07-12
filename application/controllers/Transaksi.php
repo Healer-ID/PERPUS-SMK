@@ -14,7 +14,6 @@ class Transaksi extends CI_Controller {
 			redirect($url);
 		}
 	 }
-	 
 	/**
 	 * Index Page for this controller.
 	 *
