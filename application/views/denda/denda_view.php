@@ -7,6 +7,7 @@
     <ol class="breadcrumb">
 			<li><a href="<?php echo base_url('dashboard');?>"><i class="fa fa-dashboard"></i>&nbsp; Dashboard</a></li>
 			<li class="active"><i class="fa fa-file-text"></i>&nbsp; <?= $title_web;?></li>
+			
     </ol>
   </section>
   <section class="content">
