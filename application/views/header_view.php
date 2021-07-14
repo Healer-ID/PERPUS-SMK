@@ -60,7 +60,7 @@
     <!-- Logo -->
     <a href="<?php echo base_url('index.php/dashboard');?>" class="logo" style="background-color: white ">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini" style="color: black"><b>PC</b></span>
+      <span class="logo-mini" style="color: black"><b>SI</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg" style="color: black">SI-PERPUSTAKAAN</span>
     </a>
