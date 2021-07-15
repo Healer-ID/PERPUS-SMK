@@ -14,6 +14,7 @@ class Transaksi extends CI_Controller {
 			redirect($url);
 		}
 	 }
+	 
 	/**
 	 * Index Page for this controller.
 	 *
@@ -246,9 +247,9 @@ class Transaksi extends CI_Controller {
 	{
 		if(!empty($this->input->post('tambah')))
 		{
-			$post= htmlentities($this->input->post());
+			$post= $this->input->post('harga');
 			$data = array(
-				'harga_denda'=>htmlentities($post['harga']),
+				'harga_denda'=>$post,
 				'stat'=>'Tidak Aktif',
 				'tgl_tetap' => date('Y-m-d')
 			);
@@ -393,7 +394,7 @@ class Transaksi extends CI_Controller {
 			</thead>
 			<tbody>
 			<?php $no=1;
-				foreach(array_values(unserialize($this->session->userdata('cart'))) as $items){?>
+				foreach(array_values($this->session->userdata('cart')) as $items){?>
 				<tr>
 					<td><?= $no;?></td>
 					<td><?= $items['name'];?></td>
