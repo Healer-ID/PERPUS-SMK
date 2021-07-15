@@ -7,7 +7,6 @@
     <ol class="breadcrumb">
 			<li><a href="<?php echo base_url('dashboard');?>"><i class="fa fa-dashboard"></i>&nbsp; Dashboard</a></li>
 			<li class="active"><i class="fa fa-file-text"></i>&nbsp; <?= $title_web;?></li>
-			
     </ol>
   </section>
   <section class="content">
@@ -20,7 +19,8 @@
 						<div class="box-header with-border">
 							<?php if(!empty($this->input->get('id'))){?>
 							<h4> Edit Harga Denda</h4>
-							<?php }else{?>
+							<?php }?>
+							<?php if(!empty($this->input->get('harga_denda'))){?>
 							<h4> Tambah Harga Denda</h4>
 							<?php }?>
 						</div>
@@ -30,7 +30,7 @@
 							<form method="post" action="<?= base_url('transaksi/dendaproses');?>">
 								<div class="form-group">
 								<label for="">Harga Denda</label>
-									<input type="number" name="harga"  value="<?=$den->harga_denda;?>" class="form-control" placeholder="Contoh : 10000" >
+									<input type="harga_denda" name="harga"  value="<?=$den->harga_denda;?>" class="form-control" placeholder="Contoh : 10000" >
 								
 								</div>
 								<div class="form-group">
@@ -48,7 +48,7 @@
 
 							<form method="post" action="<?= base_url('transaksi/dendaproses');?>">
 								<div class="form-group">
-								<label for="">Harga Denda</label>
+								<label for="">Mulai Tanggal</label>
 									<input type="number" name="harga" class="form-control" placeholder="Contoh : 10000" >
 								</div>
 								<br/>
