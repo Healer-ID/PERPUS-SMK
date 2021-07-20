@@ -394,7 +394,7 @@ class Transaksi extends CI_Controller {
 			</thead>
 			<tbody>
 			<?php $no=1;
-				foreach(array_values($this->session->userdata('cart')) as $items){?>
+				foreach(array_values(unserialize($this->session->userdata('cart'))) as $items){?>
 				<tr>
 					<td><?= $no;?></td>
 					<td><?= $items['name'];?></td>
