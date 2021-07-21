@@ -39,7 +39,7 @@
                     <div class="inner">
                       <h3><?= $count_buku;?></h3>
 
-                      <p>Jenis Buku</p>
+                      <p>Buku</p>
                     </div>
                     <div class="icon">
                       <i class="fa fa-book"></i>
@@ -54,7 +54,7 @@
                     <div class="inner">
                       <h3><?= $count_pinjam;?></h3>
 
-                      <p>Pinjam</p>
+                      <p>Di Pinjam</p>
                     </div>
                     <div class="icon">
                       <i class="fa fa-user-plus"></i>

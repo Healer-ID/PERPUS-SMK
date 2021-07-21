@@ -29,7 +29,7 @@
 							<form method="post" action="<?= base_url('data/rakproses');?>">
 								<div class="form-group">
 								<label for="">Nama Rak / Lokasi</label>
-								<input type="text" name="rak"  value="<?=$rak->nama_rak;?>" id="rak" class="form-control" placeholder="Contoh : Rak Buku 1" >
+								<input type="text" name="rak"  value="<?=$rak->nama_rak;?>" id="rak" class="form-control" placeholder="Contoh : L1-R1" >
 								
 								</div>
 								<br/>
@@ -41,7 +41,7 @@
 							<form method="post" action="<?= base_url('data/rakproses');?>">
 								<div class="form-group">
 								<label for="">Nama Rak / Lokasi</label>
-								<input type="text" name="rak" id="rak" class="form-control" placeholder="Contoh : Rak Buku 1" >
+								<input type="text" name="rak" id="rak" class="form-control" placeholder="Contoh : L1-R1" >
 								
 								</div>
 								<br/>

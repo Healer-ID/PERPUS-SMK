@@ -42,7 +42,7 @@
         <?php if($this->uri->uri_string() == 'user/tambah'){ echo 'active';}?>
         <?php if($this->uri->uri_string() == 'user/edit/'.$this->uri->segment('3')){ echo 'active';}?>">
           <a href="<?php echo base_url('user');?>" class="cursor">
-            <i class="fa fa-user"></i> <span>Data Pengguna</span></a>
+            <i class="fa fa-user"></i> <span>Data User</span></a>
 				</li>
 				<li class="treeview <?php if($this->uri->uri_string() == 'data/kategori'){ echo 'active';}?>
 				<?php if($this->uri->uri_string() == 'data/rak'){ echo 'active';}?>
@@ -52,7 +52,7 @@
 				<?php if($this->uri->uri_string() == 'data/bukuedit/'.$this->uri->segment('3')){ echo 'active';}?>">
           <a href="#">
             <i class="fa fa-pencil-square"></i>
-            <span>Data </span>
+            <span>Master Data</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
