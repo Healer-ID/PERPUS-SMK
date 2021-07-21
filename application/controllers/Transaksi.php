@@ -247,9 +247,9 @@ class Transaksi extends CI_Controller {
 	{
 		if(!empty($this->input->post('tambah')))
 		{
-			$post= htmlentities($this->input->post());
+			$post= $this->input->post('harga');
 			$data = array(
-				'harga_denda'=>htmlentities($post['harga']),
+				'harga_denda'=>$post,
 				'stat'=>'Tidak Aktif',
 				'tgl_tetap' => date('Y-m-d')
 			);

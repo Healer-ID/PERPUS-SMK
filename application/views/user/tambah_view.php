@@ -26,11 +26,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tempat Lahir</label>
-                                    <input type="text" class="form-control" name="lahir" required="required" placeholder="Contoh : Bekasi">
+                                    <input type="text" class="form-control" name="lahir" required="required" placeholder="Contoh : Yogyakarta">
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal Lahir</label>
-                                    <input type="date" class="form-control" name="tgl_lahir" required="required" placeholder="Contoh : 1999-05-18">
+                                    <input type="date" class="form-control" name="tgl_lahir" required="required" placeholder="Contoh : 2000-02-03">
                                 </div>
                                 <div class="form-group">
                                     <label>Username</label>
@@ -62,11 +62,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>E-mail</label>
-                                    <input type="email" class="form-control" name="email" required="required" placeholder="Contoh : fauzan1892@codekop.com">
+                                    <input type="email" class="form-control" name="email" required="required" placeholder="Contoh : randisyustico@gmail.com">
                                 </div>
                                 <div class="form-group">
                                     <label>Pas Foto</label>
-                                    <input type="file" accept="image/*" name="gambar" required="required">
+                                    <input type="file" accept="image/*" name="gambar">
                                 </div>
                                 <div class="form-group">
                                     <label>Alamat</label>

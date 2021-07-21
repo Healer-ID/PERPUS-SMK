@@ -13,20 +13,20 @@
   <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/bower_components/font-awesome/css/font-awesome.min.css">
-	
-	
-	<!-- Select2 -->
-	<link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/bower_components/select2/dist/css/select2.min.css">
-	
-	<!-- Ionicons -->
-	<link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/bower_components/Ionicons/css/ionicons.min.css">
-	<!-- Theme style -->  
-	
-	<link href="<?php echo base_url();?>assets_style/assets/plugins/summernote/summernote-lite.css" rel="stylesheet">
+  
+  
+  <!-- Select2 -->
+  <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/bower_components/select2/dist/css/select2.min.css">
+  
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->  
+  
+  <link href="<?php echo base_url();?>assets_style/assets/plugins/summernote/summernote-lite.css" rel="stylesheet">
 
   <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/dist/css/AdminLTE.css">
-	<link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/dist/css/responsive.css">
-	
+  <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/dist/css/responsive.css">
+  
   <!-- Bootstrap time Picker -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets_style/assets/plugins/timepicker/bootstrap-timepicker.min.css">
   <!-- bootstrap datepicker -->
@@ -48,7 +48,7 @@
   <![endif]-->
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-	<!-- offline -->
+  <!-- offline -->
   <script type="text/javascript">
       $(document).ajaxStart(function() { Pace.restart(); });
   </script>
@@ -58,30 +58,30 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="<?php echo base_url('index.php/dashboard');?>" class="logo">
+    <a href="<?php echo base_url('index.php/dashboard');?>" class="logo" style="background-color: white ">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>P</b>C</span>
+      <span class="logo-mini" style="color: black"><b>SI</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">SI-PERPUSTAKAAN</span>
+      <span class="logo-lg" style="color: black">SI-PERPUSTAKAAN</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top" style="background-color: white ">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="color: black" style="background-color: white ">
+        <span class="sr-only" style="background-color: white ">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+      <div class="navbar-custom-menu" style="background-color: white ">
+        <ul class="nav navbar-nav" style="background-color: white ">
           <li>
             <?php
               $d = $this->db->query("SELECT * FROM tbl_login WHERE id_login = '$idbo'")->row();
              ?>
-            <a href="<?= base_url('user/edit/'.$idbo);?>">
+            <a href="<?= base_url('user/edit/'.$idbo);?>" style="color: black">
               Welcome , <i class="fa fa-edit"> </i> <?php echo $d->nama; echo ' | ( '.$d->level.' )'; ?></a>
           </li>
           <li>
-            <a href="<?php echo base_url();?>login/logout">Sign out</a>
+            <a href="<?php echo base_url();?>login/logout" style="color: black">Sign out</a>
           </li>
           <!-- Control Sidebar Toggle Button 
           <li>

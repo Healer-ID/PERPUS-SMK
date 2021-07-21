@@ -30,7 +30,7 @@
                                 <th>No</th>
                                 <th>Sampul</th>
                                 <th>ISBN</th>
-                                <th>Title</th>
+                                <th>Judul</th>
                                 <th>Penerbit</th>
                                 <th>Tahun Buku</th>
                                 <th>Stok Buku</th>
