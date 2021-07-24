@@ -115,8 +115,33 @@
 				<li class="<?php if($this->uri->uri_string() == 'transaksi/denda'){ echo 'active';}?>">
 					<a href="<?php echo base_url("transaksi/denda");?>" class="cursor">
 						<i class="fa fa-money"></i> <span>Denda</span>
+						
 					</a>
 				</li>
+        <li class="treeview 
+					<?php if($this->uri->uri_string() == 'peminjaman'){ echo 'active';}?>
+					<?php if($this->uri->uri_string() == 'peminjaman/pinjam'){ echo 'active';}?>
+					<?php if($this->uri->uri_string() == 'peminjaman/detailpinjam/'.$this->uri->segment('3')){ echo 'active';}?>
+					<?php if($this->uri->uri_string() == 'peminjaman/kembalipinjam/'.$this->uri->segment('3')){ echo 'active';}?>">
+          <a href="#">
+            <i class="fa fa-download"></i>
+            <span>Laporan</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+					<ul class="treeview-menu">
+						<li class="<?php if($this->uri->uri_string() == 'peminjaman'){ echo 'active';}?>
+							<?php if($this->uri->uri_string() == 'peminjaman/pinjam'){ echo 'active';}?>
+							<?php if($this->uri->uri_string() == 'peminjaman/detailpinjam/'.$this->uri->segment('3')){ echo 'active';}?>
+							<?php if($this->uri->uri_string() == 'peminjaman/kembalipinjam/'.$this->uri->segment('3')){ echo 'active';}?>">
+							<a href="<?php echo base_url("peminjaman");?>" class="cursor">
+								<span class="fa fa-upload"></span> Laporan Transaksi Peminjaman
+							</a>
+              <a href="<?php echo base_url("buku");?>" class="cursor">
+								<span class="fa fa-upload"></span> Laporan Data Buku
+							</a>
+						</li>
         
 			<?php }?>
 			<?php if($this->session->userdata('level') == 'Anggota'){?>
