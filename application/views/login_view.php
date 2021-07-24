@@ -53,7 +53,7 @@
   <div class="login-logo" >
     <img src="<?php echo base_url('assets_style/image/smk.png');?>" alt="logo" width="120px">
     <br>
-    <a href="index.php" style="color: black;"><b>Sistem Informasi <br/>Perpustakaan</b></a>
+    <a href="index.php" style="color: black;"><b>SISTEM INFORMASI <br/>PERPUSTAKAAN</b></a>
   </div>
   
     <form action="<?= base_url('login/auth');?>" method="POST">

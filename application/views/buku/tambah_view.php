@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Judul Buku</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Contoh : Cara Cepat Belajar Pemrograman Web">
+                                    <input type="text" class="form-control" name="title" placeholder="Contoh : Panduan belajar Python">
                                 </div>
                                 <div class="form-group">
                                     <label>Nama Pengarang</label>

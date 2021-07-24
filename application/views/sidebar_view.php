@@ -115,9 +115,9 @@
 				<li class="<?php if($this->uri->uri_string() == 'transaksi/denda'){ echo 'active';}?>">
 					<a href="<?php echo base_url("transaksi/denda");?>" class="cursor">
 						<i class="fa fa-money"></i> <span>Denda</span>
-						
 					</a>
 				</li>
+        
 			<?php }?>
 			<?php if($this->session->userdata('level') == 'Anggota'){?>
 				<li class="<?php if($this->uri->uri_string() == 'transaksi'){ echo 'active';}?>">
