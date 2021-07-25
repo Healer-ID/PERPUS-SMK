@@ -96,7 +96,8 @@
 							<input type="hidden" name="gmbr" value="<?= $buku->sampul;?>">
 							<input type="hidden" name="lamp" value="<?= $buku->lampiran;?>">
 							<input type="hidden" name="edit" value="<?= $buku->id_buku;?>">
-                            <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                            <button type="submit" class="btn btn-primary btn-md">Submit</button>
+                             
                     </form>
                             <a href="<?= base_url('data');?>" class="btn btn-danger btn-md">Kembali</a>
                         </div>

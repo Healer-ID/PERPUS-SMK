@@ -44,4 +44,119 @@ class Buku extends CI_Controller {
 		$this->load->view('laporan/databuku_view',$this->data);
 		$this->load->view('footer_view',$this->data);
 	}
+	public function katproses()
+	{
+		if(!empty($this->input->post('tambah')))
+		{
+			$post= $this->input->post();
+			$data = array(
+				'nama_kategori'=>htmlentities($post['kategori']),
+			);
+
+			$this->db->insert('tbl_kategori', $data);
+
+			
+			$this->session->set_flashdata('pesan','<div id="notifikasi"><div class="alert alert-success">
+			<p> Tambah Kategori Sukses !</p>
+			</div></div>');
+			redirect(base_url('data/kategori'));  
+		}
+
+		if(!empty($this->input->post('edit')))
+		{
+			$post= $this->input->post();
+			$data = array(
+				'nama_kategori'=>htmlentities($post['kategori']),
+			);
+			$this->db->where('id_kategori',htmlentities($post['edit']));
+			$this->db->update('tbl_kategori', $data);
+
+
+			$this->session->set_flashdata('pesan','<div id="notifikasi"><div class="alert alert-success">
+			<p> Edit Kategori Sukses !</p>
+			</div></div>');
+			redirect(base_url('data/kategori')); 		
+		}
+
+		if(!empty($this->input->get('kat_id')))
+		{
+			$this->db->where('id_kategori',$this->input->get('kat_id'));
+			$this->db->delete('tbl_kategori');
+
+			$this->session->set_flashdata('pesan','<div id="notifikasi"><div class="alert alert-warning">
+			<p> Hapus Kategori Sukses !</p>
+			</div></div>');
+			redirect(base_url('data/kategori')); 
+		}
+	}
+
+	public function rak()
+	{
+		
+        $this->data['idbo'] = $this->session->userdata('ses_id');
+		$this->data['rakbuku'] =  $this->db->query("SELECT * FROM tbl_rak ORDER BY id_rak DESC");
+
+		if(!empty($this->input->get('id'))){
+			$id = $this->input->get('id');
+			$count = $this->M_Admin->CountTableId('tbl_rak','id_rak',$id);
+			if($count > 0)
+			{	
+				$this->data['rak'] = $this->db->query("SELECT *FROM tbl_rak WHERE id_rak='$id'")->row();
+			}else{
+				echo '<script>alert("KATEGORI TIDAK DITEMUKAN");window.location="'.base_url('data/rak').'"</script>';
+			}
+		}
+
+        $this->data['title_web'] = 'Data Rak Buku ';
+        $this->load->view('header_view',$this->data);
+        $this->load->view('sidebar_view',$this->data);
+        $this->load->view('rak/rak_view',$this->data);
+        $this->load->view('footer_view',$this->data);
+	}
+
+	public function rakproses()
+	{
+		if(!empty($this->input->post('tambah')))
+		{
+			$post= $this->input->post();
+			$data = array(
+				'nama_rak'=>htmlentities($post['rak']),
+			);
+
+			$this->db->insert('tbl_rak', $data);
+
+			
+			$this->session->set_flashdata('pesan','<div id="notifikasi"><div class="alert alert-success">
+			<p> Tambah Rak Buku Sukses !</p>
+			</div></div>');
+			redirect(base_url('data/rak'));  
+		}
+
+		if(!empty($this->input->post('edit')))
+		{
+			$post= $this->input->post();
+			$data = array(
+				'nama_rak'=>htmlentities($post['rak']),
+			);
+			$this->db->where('id_rak',htmlentities($post['edit']));
+			$this->db->update('tbl_rak', $data);
+
+
+			$this->session->set_flashdata('pesan','<div id="notifikasi"><div class="alert alert-success">
+			<p> Edit Rak Sukses !</p>
+			</div></div>');
+			redirect(base_url('data/rak')); 		
+		}
+
+		if(!empty($this->input->get('rak_id')))
+		{
+			$this->db->where('id_rak',$this->input->get('rak_id'));
+			$this->db->delete('tbl_rak');
+
+			$this->session->set_flashdata('pesan','<div id="notifikasi"><div class="alert alert-warning">
+			<p> Hapus Rak Buku Sukses !</p>
+			</div></div>');
+			redirect(base_url('data/rak')); 
+		}
+	}
 }
