@@ -131,11 +131,11 @@
             </span>
           </a>
 					<ul class="treeview-menu">
-						<li class="<?php if($this->uri->uri_string() == 'Order'){ echo 'active';}?>
-							<?php if($this->uri->uri_string() == 'Order/create'){ echo 'active';}?>
-							<?php if($this->uri->uri_string() == 'Order/store/'.$this->uri->segment('3')){ echo 'active';}?>
-							<?php if($this->uri->uri_string() == 'Order/export/'.$this->uri->segment('3')){ echo 'active';}?>">
-							<a href="<?php echo base_url("Order");?>" class="cursor">
+						<li class="<?php if($this->uri->uri_string() == 'peminjaman'){ echo 'active';}?>
+							<?php if($this->uri->uri_string() == 'peminjaman/pinjam'){ echo 'active';}?>
+							<?php if($this->uri->uri_string() == 'peminjaman/detailpinjam/'.$this->uri->segment('3')){ echo 'active';}?>
+							<?php if($this->uri->uri_string() == 'peminjaman/kembalipinjam/'.$this->uri->segment('3')){ echo 'active';}?>">
+							<a href="<?php echo base_url("peminjaman");?>" class="cursor">
 								<span class="fa fa-upload"></span> Report Transaksi
 							</a>
               <a href="<?php echo base_url("Laporanbuku");?>" class="cursor">

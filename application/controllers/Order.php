@@ -20,10 +20,10 @@ class Order extends CI_Controller {
     }
  
     public function store()
-    {		
+    {       
         $pinjam_id      = $this->input->post('pinjam_id');
         $anggota_id     = $this->input->post('anggota_id');
-        $buku_id	    = $this->input->post('buku_id');
+        $buku_id        = $this->input->post('buku_id');
         $tgl_pinjam     = $this->input->post('tgl_pinjam');
         $tgl_balik      = $this->input->post('tgl_balik');
         $tgl_kembali    = $this->input->post('tgl_kembali');
