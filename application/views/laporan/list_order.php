@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -39,17 +41,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $no = 1; foreach($orders->result_array() as $data) { ?>
-                                <tr>
-                                    <td><?= $no++ ?></td>
-                                    <td><?= $data['pinjam_id'] ?></td>
-                                    <td><?= $data['anggota_id'] ?></td>
-                                    <td><?= $data['buku_id'] ?></td>
-                                    <td><?= $data['tgl_kembali'] ?></td>
-                                    <td><?= $data['tgl_balik'] ?></td>
-                                    <td><?= $data['lama_pinjam'] ?></td>
-                                    <td><?= $data['status'] ?></td>
-                                </tr>
+                                <?php $no = 1;
+                                foreach ($orders->result_array() as $data) { ?>
+                                    <tr>
+                                        <td><?= $no++ ?></td>
+                                        <td><?= $data['pinjam_id'] ?></td>
+                                        <td><?= $data['anggota_id'] ?></td>
+                                        <td><?= $data['buku_id'] ?></td>
+                                        <td><?= $data['tgl_kembali'] ?></td>
+                                        <td><?= $data['tgl_balik'] ?></td>
+                                        <td><?= $data['lama_pinjam'] ?></td>
+                                        <td><?= $data['status'] ?></td>
+                                    </tr>
                                 <?php } ?>
                             </tbody>
                         </table>
@@ -63,4 +66,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
