@@ -43,7 +43,7 @@ class Order extends CI_Controller
 
         $simpan = $this->order_model->insert("tbl_pinjam", $data);
         if ($simpan) {
-            echo '<script>alert("Berhasil menambah data order");window.location.href="' . base_url('index.php/order') . '";</script>';
+            echo '<script>alert("Berhasil menambah data order");window.location.href="' . base_url('index.php/order_model') . '";</script>';
         }
     }
 
@@ -65,32 +65,33 @@ class Order extends CI_Controller
         $pdf->Ln(10);
         $pdf->SetFont('', 'B', 12);
         $pdf->Cell(7, 8, "No", 1, 0, 'C');
-        $pdf->Cell(35, 8, "pinjam_id", 1, 0, 'C');
-        $pdf->Cell(35, 8, "anggota_id", 1, 0, 'C');
-        $pdf->Cell(35, 8, "buku_id", 1, 0, 'C');
-        $pdf->Cell(35, 8, "tgl_pinjam", 1, 0, 'C');
-        $pdf->Cell(35, 8, "tgl_balik", 1, 0, 'C');
-        $pdf->Cell(35, 8, "tgl_kembali", 1, 0, 'C');
-        $pdf->Cell(35, 8, "lama_pinjam", 1, 0, 'C');
-        $pdf->Cell(35, 8, "status", 1, 1, 'C');
+        $pdf->Cell(30, 8, "pinjam_id", 1, 0, 'C');
+        $pdf->Cell(30, 8, "anggota_id", 1, 0, 'C');
+        $pdf->Cell(30, 8, "buku_id", 1, 0, 'C');
+        $pdf->Cell(30, 8, "tgl_pinjam", 1, 0, 'C');
+        $pdf->Cell(30, 8, "tgl_balik", 1, 0, 'C');
+        $pdf->Cell(30, 8, "tgl_kembali", 1, 0, 'C');
+        $pdf->Cell(30, 8, "lama_pinjam", 1, 0, 'C');
+        $pdf->Cell(30, 8, "status", 1, 1, 'C');
         $pdf->SetFont('', '', 12);
-        foreach ($orders->result_array() as $k => $order) {
-            $this->addRow($pdf, $k + 1, $order);
-        }
+        foreach ($orders->result_array() as $row => $order) 
+            $this->addRow($pdf, $row + 1, $order);
+        
         $tanggal = date('d-m-Y');
         $pdf->Output('Laporan Order - ' . $tanggal . '.pdf');
     }
 
     private function addRow($pdf, $no, $order)
     {
-        $pdf->Cell(7, 8, $no, 1, 0, 'C');
-        $pdf->Cell(35, 8, $order['pinjam_id'], 1, 0, '');
-        $pdf->Cell(35, 8, $order['anggota_id'], 1, 0, '');
-        $pdf->Cell(35, 8, $order['buku_id'], 1, 0, '');
-        $pdf->Cell(35, 8, date('d-m-Y', strtotime($order['tgl_pinjam'])), 1, 0, 'C');
-        $pdf->Cell(35, 8, date('d-m-Y', strtotime($order['tgl_balik'])), 1, 0, 'C');
-        $pdf->Cell(35, 8, date('d-m-Y', strtotime($order['tgl_kembali'])), 1, 0, 'C');
-        $pdf->Cell(35, 8, $order['lama_pinjam'], 1, 0, 'C');
-        $pdf->Cell(35, 8, $order['status'], 1, 0, 'C');
+        $pdf->Cell(7, 6, $no, 1, 0, 'C');
+        $pdf->Cell(30, 6, $order['pinjam_id'], 1, 0, '');
+        $pdf->Cell(30, 6, $order['anggota_id'], 1, 0, '');
+        $pdf->Cell(30, 6, $order['buku_id'], 1, 0, '');
+        $pdf->Cell(30, 6, date('d-m-Y', strtotime($order['tgl_pinjam'])), 1, 0);
+        $pdf->Cell(30, 6, date('d-m-Y', strtotime($order['tgl_balik'])), 1, 0);
+        $pdf->Cell(30, 6, date('d-m-Y', strtotime($order['tgl_kembali'])), 1, 0);
+        $pdf->Cell(30, 6, $order['lama_pinjam'], 1, 0, 'C');
+        $pdf->Cell(30, 6, $order['status'], 1, 0, 'C');
+        $pdf->Ln();
     }
 }

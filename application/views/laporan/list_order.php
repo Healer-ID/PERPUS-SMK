@@ -15,13 +15,15 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
+   <div class="row">
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        List Data Order
-                        <div class="btn-group float-right">
+                <div class="box box-primary">
+
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <br />
+                        <div class="table-responsive">
+                            <table id="example1" class="table table-bordered table-striped table" width="100%">
 
                             <a href="<?= base_url('index.php/order/export') ?>" class="btn btn-primary" target="_blank">Export</a>
                         </div>
