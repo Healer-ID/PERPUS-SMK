@@ -81,6 +81,7 @@ class Order extends CI_Controller
         $pdf->Output('Laporan Order - ' . $tanggal . '.pdf');
     }
 
+
     private function addRow($pdf, $no, $order)
     {
         $pdf->Cell(7, 6, $no, 1, 0, 'C');
