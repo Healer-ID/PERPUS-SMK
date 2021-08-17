@@ -31,7 +31,7 @@
 								<?php if (!empty($this->input->get('id'))) { ?>
 									<form method="post" action="<?= base_url('transaksi/dendaproses'); ?>">
 										<div class="form-group">
-											<label for="">Harga Denda</label>
+											<label for="">Jumlah Denda</label>
 											<input type="harga_denda" name="harga" value="<?= $den->harga_denda; ?>" class="form-control" placeholder="Contoh : 10000">
 
 										</div>
@@ -54,7 +54,7 @@
 
 									<form method="post" action="<?= base_url('transaksi/dendaproses'); ?>">
 										<div class="form-group">
-											<label for="">Mulai Tanggal</label>
+											<label for="">Jumlah Denda</label>
 											<input type="number" name="harga" class="form-control" placeholder="Contoh : 10000">
 										</div>
 										<br />
@@ -76,7 +76,7 @@
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Harga Denda</th>
+												<th>Jumlah Denda</th>
 												<th>Status</th>
 												<th>Mulai Tanggal</th>
 												<th>Aksi</th>
