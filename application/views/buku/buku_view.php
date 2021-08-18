@@ -33,6 +33,7 @@
                                         <th>Sampul</th>
                                         <th>ISBN</th>
                                         <th>Judul</th>
+                                        <th>Kategori</th>
                                         <th>Penerbit</th>
                                         <th>Tahun Buku</th>
                                         <th>Stok Buku</th>
@@ -59,6 +60,7 @@
                                             </td>
                                             <td><?= $isi['isbn']; ?></td>
                                             <td><?= $isi['title']; ?></td>
+                                            <td><?= $isi['Kategori']; ?></td>
                                             <td><?= $isi['penerbit']; ?></td>
                                             <td><?= $isi['thn_buku']; ?></td>
                                             <td><?= $isi['jml']; ?></td>
